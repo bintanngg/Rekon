@@ -2,7 +2,7 @@
 
 **A Python utility for automated bank account reconciliation**
 
-Download the latest version of executable file in /dist/v1.1/exe for Windows OS user.
+[Download the latest version](https://github.com/bintanngg/Rekon/releases/tag/v1.1)
 
 Made By Bintanngg
 
