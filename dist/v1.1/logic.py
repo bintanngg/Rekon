@@ -160,9 +160,18 @@ class RekonsiliasiLogic:
             df_copy[kolom_debet] = pd.to_numeric(df_copy[kolom_debet], errors='coerce')
             df_copy[kolom_kredit] = pd.to_numeric(df_copy[kolom_kredit], errors='coerce')
 
-            # Cek NaN
-            if df_copy[kolom_debet].isna().any() or df_copy[kolom_kredit].isna().any():
-                messagebox.showerror("Error", ERROR_NON_NUMERIC)
+            # Detect rows with non-numeric values in debit and credit columns
+            debit_nan_rows = df_copy.index[df_copy[kolom_debet].isna()].tolist()
+            credit_nan_rows = df_copy.index[df_copy[kolom_kredit].isna()].tolist()
+
+            if debit_nan_rows or credit_nan_rows:
+                error_message = "Nilai non-numeric ditemukan pada baris:\n"
+                if debit_nan_rows:
+                    error_message += f" - Kolom Debet: {', '.join(str(r + 2) for r in debit_nan_rows)}\n"
+                    # +2 because dataframe index starts at 0 and Excel rows start at 1 with header row
+                if credit_nan_rows:
+                    error_message += f" - Kolom Kredit: {', '.join(str(r + 2) for r in credit_nan_rows)}\n"
+                messagebox.showerror("Error", error_message)
                 self.ui.status_var.set("Error: Non-numeric values")
                 self.ui.progress_var.set(0)
                 return

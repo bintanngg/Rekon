@@ -1,0 +1,4 @@
+2025-11-23 20:35:31,703 - ERROR - Error reading file D:/Github/Rekon/test_samples/sample_nan_transaction.xlsx: File is not a zip file
+2025-11-23 20:45:30,535 - INFO - File loaded: C:/Users/Lenovo/Downloads/Book1.xlsx, Size: 53501 bytes
+2025-11-23 20:45:38,430 - INFO - Reconciliation completed. Output: C:/Users/Lenovo/Downloads/rekonsiliasi_output.xlsx, Issues: 999
+2025-11-23 20:46:41,624 - INFO - File loaded: C:/Users/Lenovo/Downloads/Book1.xlsx, Size: 53124 bytes

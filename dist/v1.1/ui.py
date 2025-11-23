@@ -1,14 +1,19 @@
 import tkinter as tk
 from tkinter import ttk
+import os
 
 class RekonsiliasiUI:
     def __init__(self, root, logic):
         self.root = root
         self.logic = logic
-        self.root.title("Rekonsiliasi v1.1 by Bintang")
+        self.root.title("Rekon v1.1 | App by Bintanngg")
         self.root.geometry("600x700")
         self.root.resizable(True, True)
-
+        self.script_dir = os.path.dirname(os.path.abspath(__file__))
+        self.image_path = os.path.join(self.script_dir, 'cat.png')
+        self.app_icon = tk.PhotoImage(file=self.image_path)
+        self.root.iconphoto(False, self.app_icon)
+        
         # Variables
         self.kolom_ket = tk.StringVar()
         self.kolom_debet = tk.StringVar()
