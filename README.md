@@ -1,8 +1,6 @@
-# Rekon v1.1
+# Rekon v1.1 (Latest Version)
 
 **A Python utility for automated bank account reconciliation**
-
-[Download the latest version](https://github.com/bintanngg/Rekon/releases/tag/v1.1)
 
 Made By Bintanngg
 
